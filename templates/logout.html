@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section class="registration-section">
+        <div class="registration-section-container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <h4 class="text-dark">You've been logged out!</h4>
+                    <a href="{% url 'user-login' %}">Login again!</a>
+                    </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Registration</title>
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <link rel="stylesheet" href={% static "bootstrap/css/bootstrap.css" %}>
+</head>
+<body>
+<section class="navigation-section">
+    <div class="navigation-section-container">
+        <nav class="navigation">
+            <a href="{% url 'my-home' %}"><button>Home</button></a>
+            <a href=""><button>About</button></a>
+            <a href=""><button>Gallery</button></a>
+            <a href="{% url 'users-registration'%}"><button>Register</button></a>
+            <a href="{% url 'user-login' %}"><button>Login</button></a>
+            <a href="{% url 'user-logout' %}"><button>Logout</button></a>
+        </nav>
+    </div>
+</section>
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: aqua">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
